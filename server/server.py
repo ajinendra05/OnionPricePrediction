@@ -45,6 +45,11 @@ def get_Variety():
     return response
 
 
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    print("hello")
+
 @app.route('/predict_Onion_price', methods=['GET', 'POST'])
 def predict_Onion_price():
     # print("hello")
@@ -94,6 +99,7 @@ def predict_Onion_price():
     # print(isProducing)
     # print(Harvesting_month)
     # print(isDrought)
+    
 
     if request.method == 'POST':
         request_data = request.data
@@ -121,4 +127,4 @@ def predict_Onion_price():
 if __name__ == "__main__":
     print("Starting Python Flask Server For Home Price Prediction...")
     util.load_saved_artifacts()
-    app.run()
+    app.run(host="0.0.0.0", port=int("3000"))

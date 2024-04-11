@@ -6,7 +6,7 @@ import 'package:oionpricepridiction/models/project_model.dart';
 import 'package:provider/provider.dart';
 
 class Server {
-  static const url = 'http://127.0.0.1:5000';
+  static const url = 'http://127.0.0.1:3000';
 
   static Future<void> fetchState() async {
     const currentURL = '$url/get_State_names';
@@ -27,6 +27,7 @@ class Server {
   }
 
   static Future<void> fetchDistrictByState(BuildContext context) async {
+    print("aagaya");
     const currentURL = '$url/get_District_by_state';
 
     try {
@@ -61,9 +62,12 @@ class Server {
 
         Provider(
           create: (context) {
-            return Provider.of<kdataaa>(context, listen: false);
+            return Provider.of<kdataaa>(context, listen: false)
+                .setdistrict(jsonMapData['District']);
           },
         );
+        // print(jsonMapData['District']);
+        print("fetch district");
       } else {
         print("error in backend");
       }
