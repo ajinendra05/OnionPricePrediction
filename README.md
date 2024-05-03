@@ -1,6 +1,9 @@
 # Onion_price_predictor
 Onion price predictor
 
+# Docker Pull Commands:
+* frontend: docker pull ajinendra05/onion-price-prediction-frontend
+* backend: docker pull ajinendra05/onion-price-prediction-backend
 # Introduction:
 This project is made to predict onion prices with the help of python libraries and resources to be contributed in Artificial Intelligence field. We took data from data.world and data.gov.in for analysis of prices per gallon across various Indian States. This project can be implemented to various vegetables in future, But we took onion as specific vegetable as in recent years variation of Onion prices in our city "Bhopal" was variating alot.
 So we came up with an idea that what if we make a project for onion price prediction, so that onions can be imported from other states which has lowest prices with harvesting months and price data. And in adverse condition like drought happen, how much storage can be kept for following months. Keeping in mind which state is producing and which is not.
